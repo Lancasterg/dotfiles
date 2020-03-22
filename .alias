@@ -1,0 +1,37 @@
+# Aliases
+
+# --- General Aliases
+alias ls='ls -GFh'
+alias ldd='otool -L'
+
+# --- Git Aliases
+alias gs="git status"
+alias gd="git diff"
+alias ga="git add"
+alias gc="git commit"
+alias gcm="git commit -m"
+alias gp="git push"
+alias gpom="git push origin master"
+alias gpo="git push origin"
+alias gpou="git push -u origin"
+alias gl="git log"
+alias galias="alias | grep git | cut -f1"
+
+# --- Conda/Venv
+alias le="conda info --envs"
+alias sd="conda deactivate"
+alias se="source activate"
+
+# --- System specific commands
+OUTPUT="$(uname -s)"
+
+# --- Mac
+if [ "${OUTPUT}" = "Darwin" ]; then
+
+# --- General 
+alias sbp="source $HOME/.bash_profile"
+
+# --- Macvim
+alias vim="mvim -v"
+
+fi
